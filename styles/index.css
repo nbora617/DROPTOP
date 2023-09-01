@@ -1,0 +1,137 @@
+main {width:100%; margin:0 auto;}
+main #fullpage_wrap {height:100vh;}
+/* main section {padding:0 60px;} */
+/* main_visual  */
+main #main_visual {height:100%;}
+main #main_visual .swiper-wrapper {position:relative; }
+main #main_visual .swiper-wrapper .swiper-slide {
+    background:url(../images/coffee-beans-917613_1920.jpg) no-repeat center;
+    background-size:cover;
+}
+main #main_visual .swiper-wrapper .swiper-slide .txt {
+    width:100%; opacity:0; transform:translateY(20px); /* 슬라이드 애니메이션 초기상태 */
+    transition:all 3s; /* 애니메이션 보이기 위해 필요 */
+    display:flex; flex-flow:column nowrap; align-items:center; justify-content:center;
+    text-align:center;
+    /* background:palevioletred; */
+    position:absolute; /* left:25%; */ top:25%;
+    /* transform: translate(-50%, -50%); */
+}
+main #main_visual .swiper-wrapper .swiper-slide .txt .title {
+    display:flex; flex-flow:row nowrap; align-items:center;
+    margin-bottom:30px
+}
+main #main_visual .swiper-wrapper .swiper-slide .txt .title h1 {
+    font-size:2.369rem; letter-spacing:-0.02rem;
+    font-family: 'Lexend Deca', sans-serif; font-weight:800;
+    color:#fff;
+}
+main #main_visual .swiper-wrapper .swiper-slide .txt .title > .center {
+    font-family: 'Lexend Deca', sans-serif; font-weight:800;
+    font-size:6.25rem; letter-spacing:-0.02rem; color:#fff;
+    display:flex; align-items:center; 
+}
+main #main_visual .swiper-wrapper .swiper-slide .txt  .title .center::after,
+main #main_visual .swiper-wrapper .swiper-slide .txt .title .center::before {
+    content:''; width:150px; height:1px; background:#fff;
+    display:inline-block; margin:0 34px; 
+}
+main #main_visual .swiper-wrapper .swiper-slide .txt h2 {
+    font-size:1.777rem; letter-spacing:-0.02rem; color:#fff;
+    line-height:40px;
+}
+main #main_visual .swiper-wrapper .slide1 {/* background:palegoldenrod; */}
+main #main_visual .swiper-wrapper .slide2 {background-color:palevioletred;}
+main #main_visual .swiper-wrapper .slide3 {background-color:pink;}
+main #main_visual .scroll {
+    position:absolute; bottom:50px; left:50%; transform: translate(-50%, -50%);
+    z-index:999;
+}
+main #main_visual .scroll span {
+    color:#fff; position:relative; display:block;
+    animation:scroll 0.7s alternate linear infinite;
+}
+main #main_visual .scroll span::after {
+    content:''; width:1px; height:50px; display:block; background:#fff;
+    margin-top:40px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); /* 가운데 정렬 */
+    /* text-align:center; */
+}
+/* 애니메이션 */
+@keyframes scroll {
+    0%{transform:translateY(-20px)};
+    100%{transform:translateY(20px);}
+}
+/* end main_visual */
+/* New menu */
+main #new_menu {
+    height:100vh; background:paleturquoise;
+    display:flex; flex-flow:column nowrap; justify-content:center;
+}
+main #new_menu h1 {
+    font-size:5rem; letter-spacing:-0.04rem; font-weight:800;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom:33px;
+}
+main #new_menu h1 em {
+    font-size:5rem; letter-spacing:-0.04rem; font-weight:800;
+    font-family: 'Lexend Deca', sans-serif;
+    color:#171C8F;
+}
+main #new_menu .wrap {
+    display:flex; flex-flow:row nowrap; justify-content:space-between;
+    align-items:center;
+    background:papayawhip;
+}
+main #new_menu .wrap .tab_link {
+    width:30%;
+}
+main #new_menu .wrap .tab_link a {
+    display:block;
+    font-size:1.777rem; font-weight:700; 
+    font-family: 'Lexend Deca', sans-serif; letter-spacing:-0.02rem;
+    margin-bottom:30px;
+}
+main #new_menu .wrap .tab_link a:last-child {margin-bottom:0;}
+.active {color:#171C8F;}
+main #new_menu .wrap .right {
+    background:palevioletred;
+    width:60%;
+}
+main #new_menu .wrap .right .c1 {}
+main #new_menu .wrap .right .c1 .top {
+    display:flex; flex-flow:row nowrap; align-items:flex-end;
+}
+main #new_menu .wrap .right .c1 .top .poster {
+    width:350px; height:400px; 
+    border-radius:50px;
+}
+main #new_menu .wrap .right .c1 .top .poster img {width:100%;}
+main #new_menu .wrap .right .c1 .top .menu_list {
+    
+    background:pink;
+}
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper {width:150px; height:200px;}
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper .swiper-slide {
+    /* width:150px;  */background:url(../images/flake1.png) no-repeat center;
+    background-size:cover;
+    display:flex; flex-flow:column nowrap;
+}   
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper .slide1 {
+    
+}
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper .slide2 {
+    background-image:url(../images/flake2.png);
+}
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper .slide3 {
+    background-image:url(../images/flake3.png);
+}
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper .swiper-slide img {width:100%;}
+main #new_menu .wrap .right .c1 .top .menu_list .swiper-wrapper .swiper-slide span {
+    
+}
+main #new_menu .wrap .right .c1 .tab_page {}
+main #new_menu .wrap .right .c1 .tab_page .prev {}
+main #new_menu .wrap .right .c1 .tab_page .next {}
+main #new_menu .wrap .right .c1 .tab_page .tab_title {}
+main #new_menu .wrap .right .c1 .tab_page .tab_title h2 {}
