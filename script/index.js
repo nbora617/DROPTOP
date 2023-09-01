@@ -1,3 +1,4 @@
+// main_visual swiper영역
 const main_bnr = new Swiper('#main_visual', {
     direction:'horizontal',
     loop:true,
@@ -20,12 +21,52 @@ const main_bnr = new Swiper('#main_visual', {
         }
     },
 })
+// NEW MENU swiper영역
 const New = new Swiper('#menu_list', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:2,
+    slidesPerView:3,
 })
+// SIGNATURE swiper
+const signature = new Swiper('#signature_swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    // slidesPerView:1,
+    loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+    pagination: {
+        el:".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+// SIGNATURE swiper end
+// EVENT
+// event tab클릭시 해당하는 내용 보이기
+const e_tab = document.querySelectorAll('#event .event_tab > a')
+const e_content = document.querySelectorAll('#event .event_box > div' )
+console.log(e_tab,e_content)
+for(let i of e_tab){i.classList.remove('e_active')}
+e_tab.forEach(function(t,i,a){
+    t.addEventListener('click',function(e){
+        e.preventDefault();
+        for(let i of e_tab){i.classList.remove('e_active')}
+        this[i].classList.add('e_active')
+        for(let i of e_content){i.styke.display='none'}
+        e_content[i].style.display = 'block'
+    })
+})
+
+
+
+
+
+
+
 // //.section형제의 부모대상
 
 // $('#fullpage').fullpage({

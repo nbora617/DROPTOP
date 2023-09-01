@@ -63,3 +63,33 @@ header > a {
     background:#fff; color:#171C8F; transition:all 0.3s;
     padding:5px 25px; border-radius:50px;
 }
+/* footer */
+footer {
+    max-width:1440px; margin:0 auto;
+    display:flex; flex-flow:column nowrap; align-items: center;
+}
+footer .f_top {
+    padding:10px 0; border:1px solid #aaa;
+    border-right:none; border-left:none;
+}
+footer .f_top img {}
+footer .f_btm {
+    display:flex; flex-flow: row nowrap; justify-content:space-between;
+    padding:20px 0;
+}
+footer .f_btm h1 {
+    width:156px; height:52px; overflow:hidden;
+}
+footer .f_btm h1 a {}
+footer .f_btm h1 a img {width:100%;}
+footer .f_middle {}
+footer .f_middle .f_m_top {
+    display:flex; flex-flow:row nowrap; justify-content:space-around;
+}
+footer .f_middle .f_m_top a {}
+footer .f_middle .f_m_top a::after {}
+footer .f_middle .address {}
+footer .f_middle p {}
+footer .f_sns {}
+footer .f_sns a {}
+footer .f_sns a img {}
