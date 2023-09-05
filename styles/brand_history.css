@@ -1,0 +1,133 @@
+main {padding:200px 0;}
+main .company_tab {
+    display:flex; justify-content:center;
+    margin-bottom:100px;
+}
+main .company_tab a {
+    font-size:1.125rem; font-weight:500; letter-spacing:-0.02rem;
+    padding:5px 10px; border-top:1px solid #000;
+    margin-right:20px;
+}
+main .company_tab .c_active {
+    color:#171C8F; border-top:1px solid #171C8F; font-weight:700;
+}
+main section {
+    background:#f1f1f1; padding:100px;
+    display:flex; flex-flow:row wrap; justify-content:space-between;
+}
+main section> .container { margin-right:100px;}
+main section .container .history-list-title {
+    position:absolute; /* top:0; */
+}
+main section .container .history-list-title .title-h3 {
+    font-size:2.369rem; font-weight:700; line-height:50px;
+}
+main section .container #historyListPin {}
+main section .container #historyListPin span {
+    font-size:7.5rem; font-weight:800; letter-spacing: -0.04rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+main section .container #historyListPin .color-gray {color:#D2D2D2;}
+main section .container #historyListPin .history-list-pin-num {color:#171C8F;}
+main section .history-list-wrap {}
+main section .history-list-wrap ul {
+}
+main section .history-list-wrap ul li {
+    padding:50px 0; border-bottom:1px dashed #aaa;
+}
+main section .history-list-wrap ul li .container {
+    display:flex; flex-flow:row wrap;
+    padding:20px;
+}
+main section .history-list-wrap ul li .container >* {
+    font-size:1.5rem; line-height:50px;
+}
+main section .history-list-wrap ul li .container .history-item-year {
+    margin-right:50px;
+}
+main section .history-list-wrap ul li .container strong {
+    font-weight:700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {}
+main #brand_history_wrap {
+    max-width:1400px; margin:0 auto;
+}
+main #brand_history_wrap .inner {
+    padding:100px 0;
+    display:flex; flex-flow:column nowrap; 
+    text-align:center;
+}
+main #brand_history_wrap .inner .company_tab {
+    margin-bottom:100px; background:pink;
+}
+main #brand_history_wrap .inner .company_tab a {
+    font-size:1.125rem; font-weight:500; letter-spacing:-0.02rem;
+    padding:5px 10px; border-top:1px solid #000;
+    margin-right:20px;
+}
+main #brand_history_wrap .inner .company_tab .c_active {
+    color:#171C8F; border-top:1px solid #171C8F; font-weight:700;
+}
+main #brand_history_wrap .inner h1 {
+    font-size:4.3rem; font-family: 'Lexend Deca', sans-serif; 
+    font-weight:700; letter-spacing:-0.04rem;
+    align-self:flex-start;
+}
+main #brand_history_wrap .inner .history_work {
+    width:100%; padding:0 50px;
+    background:palegreen;
+    display:flex; flex-flow:row nowrap; justify-content:space-between;
+    /* height:500px; */
+}
+main #brand_history_wrap .inner .history_work .hw_unfix {
+    height:500px; background:paleturquoise;
+    display:flex; align-items:center;
+    /* position:fixed; top:0; left:0; */
+}
+main #brand_history_wrap .inner .history_work .hw_unfix span {
+    font-family: 'Lexend Deca', sans-serif;  font-size:15rem;
+    font-weight:700; color:#171C8F; letter-spacing:-0.04rem;;
+    background:palegoldenrod; 
+}
+main #brand_history_wrap .inner .history_work .year_back_box {
+    display:flex; flex-flow:column nowrap; width:50%;
+}
+
+main #brand_history_wrap .inner .history_work .year_back_box .work {
+    display:flex; flex-flow:column nowrap; 
+    justify-content:center;
+    /* background:palevioletred;  */
+    height:500px;
+    border-bottom:1px solid #aaa;
+}
+main #brand_history_wrap .inner .history_work .work_list {
+    display:flex; flex-flow:row nowrap; 
+    justify-content:flex-start; align-items:center;
+    padding:10px 0;
+}
+main #brand_history_wrap .inner .history_work .work_list .month {
+    font-size:1.333rem; font-weight:500;
+    margin-right:30px;
+}
+main #brand_history_wrap .inner .history_work .work_list .text {
+    letter-spacing:-0.04rem;;
+}

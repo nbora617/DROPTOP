@@ -1,0 +1,5 @@
+@media screen and (max-width:500px){
+    main {min-width:320; height:500px;}
+    #main_visual .swiper-wrapper .swiper-slide .txt .title h1 {font-size:0.875rem;}
+    main section h1 {font-size:1.187rem;}
+}

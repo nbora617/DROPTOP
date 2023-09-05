@@ -1,8 +1,11 @@
+/* fullpage scroll */
+html{overflow: hidden;}
+html, body{width: 100%; height: 100%;}
+body, html {scroll-behavior:smooth;}
+/* main */
 main {width:100%; margin:0 auto;}
-main #fullpage_wrap {/* height:100vh; */}
-/* main section {padding:0 60px;} */
 /* main_visual  */
-main #main_visual {height:100%;}
+main #main_visual {height:100vh;}
 main #main_visual .swiper-wrapper {position:relative; }
 main #main_visual .swiper-wrapper .swiper-slide {
     background:url(../images/coffee-beans-917613_1920.jpg) no-repeat center;
@@ -91,18 +94,23 @@ main #new_menu .wrap {
 main #new_menu .wrap .tabs{margin-right:50px;}
 main #new_menu .wrap .tabs a {
     display:block; text-align:center;
-    padding:0 10px;
+    padding:10px;
     font-size:1.777rem; font-weight:500; 
     font-family: 'Lexend Deca', sans-serif; letter-spacing:-0.02rem;
+    
 }
-main #new_menu .wrap .tabs a:nth-child(2) {margin:20px 0;}
-.active {color:#171C8F; border-bottom:1px dashed #171C8F;}
+main #new_menu .wrap .tabs a:hover {animation:scale 0.5s;}
+main #new_menu .wrap .tabs a:nth-child(2) {margin:10px 0;}
+/* tab 활성화 호출 클래스 */
+main #new_menu .wrap .tabs .active {
+    color:#171C8F; border-bottom:1px dashed #171C8F; font-weight:800;
+}
 main #new_menu .wrap .right {
     display:flex; flex-flow:row nowrap;
 }
-main #new_menu .wrap .right > div {
+/* main #new_menu .wrap .right > div {
     display:flex; flex-flow:row wrap;
-}
+} */
 main #new_menu .wrap .right > div .poster {
     width:350px; height:400px; 
     border-radius:50px;
@@ -111,33 +119,54 @@ main #new_menu .wrap .right > div .poster {
 }
 main #new_menu .wrap .right > div .poster img {width:100%;}
 /* 상품리스트 slide 공통영역 */
-main #new_menu .wrap .right > div #menu_list {
+main #new_menu .wrap .right > div .swiper {
     max-width:500px;
     align-self:flex-end;
 }
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper {}
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide {
+main #new_menu .wrap .right > div .swiper .swiper-wrapper {margin-bottom:40px;}
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide {
     display:flex; flex-flow:column nowrap; align-items:center;
-    margin-right:10px;
+    margin-right:30px;
 }
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide .menu_img {
-    width:180px; margin-bottom:10px;
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_img {
+    width:180px; margin-bottom:10px; border-radius:125px; overflow:hidden;
 }
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide .menu_img img {width:100%;}
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide .menu_txt {
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_img:hover {
+    animation:scale 0.5s;
+}
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_img img {width:100%;}
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_txt {
     display:flex; flex-flow:column nowrap; align-items:center;
 }
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide .menu_txt span {text-align:center;}
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide .menu_txt span:nth-child(1) {
-    font-weight:700; margin-bottom:3px;
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_txt span {text-align:center;}
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_txt span:nth-child(1) {
+    font-weight:700; margin-bottom:3px; letter-spacing:-0.04rem;
 }
-main #new_menu .wrap .right > div #menu_list .swiper-wrapper .swiper-slide .menu_txt span:nth-child(2) {
+main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_txt span:nth-child(2) {
     font-size:0.875rem;
 }
 /* slide 개별영역 */
-main #new_menu .wrap .right .c1 {}
+main #new_menu .wrap .right .c1,
 main #new_menu .wrap .right .c2,
-main #new_menu .wrap .right .c3 {display:none;}
+main #new_menu .wrap .right .c3 {display:flex; flex-flow:row wrap;}
+/* slide pagenation */
+#new_menu .swiper .swiper-pagination {
+    text-align:right; padding-right:60px; /* pagenation 위치 변경 */
+}
+/* slide navigation */
+#new_menu .swiper .swiper-button-prev {display:none;}
+#new_menu .swiper .swiper-button-next {
+    background:url(../images/next.png) no-repeat center;
+    width:70px; right:-10px;
+    --swiper-navigation-top-offset:93%; /* 다음버튼 위치조정 */
+}
+#new_menu .swiper .swiper-button-next::after {display:none;}
+/* 애니메이션 */
+@keyframes scale {
+    0% {transform:scale(1);}
+    100% {transform:scale(1.1);}
+}
+/* new menu end */
 /* signature */
 main #signature {
     max-width:1440px; margin:0 auto;
@@ -148,11 +177,12 @@ main #signature {
 main #signature .txt_ani {
     width:535px; height:535px;
     position:absolute; right:-200px; top:-200px;
+    z-index:700;
 }
 main #signature .txt_ani img {
     animation: rotate_image 7s linear infinite;transform-origin: 50% 50%;
 }
-main #signature h1 {margin-bottom:-30px; margin-left:50px; z-index:999;}
+main #signature h1 {margin-bottom:-30px; margin-left:50px; z-index:100;}
 main #signature h1 em {font-size:4.375rem; display:block;}
 main #signature #signature_swiper {
     max-width:100%; height:auto;
@@ -173,7 +203,7 @@ main #signature #signature_swiper {
 #signature_swiper .swiper-wrapper .swiper-slide .txt {
     align-self:flex-end; max-width:450px;
 }
-#signature_swiper .swiper-wrapper .swiper-slide .txt >* {margin-bottom:15px;}
+#signature_swiper .swiper-wrapper .swiper-slide .txt >* {margin-bottom:20px;}
 #signature_swiper .swiper-wrapper .swiper-slide .txt h2 {
     font-size:1.777rem; letter-spacing:-0.02rem; font-weight:700;
     margin-bottom:30px;
@@ -363,3 +393,4 @@ main #store .store_box .right #searchFrm fieldset #searchBtn {
 }
 main #store .store_box  .right #searchFrm fieldset #searchBtn img {}
 /* store end */
+

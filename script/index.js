@@ -1,3 +1,24 @@
+// fullpage scroll
+window.addEventListener("wheel", function(e){
+	e.preventDefault();
+},{passive : false});
+var $html = $("html");
+var page = 1;
+var lastPage = $(".section").length;
+$html.animate({scrollTop:0},10);
+
+$(window).on("wheel", function(e){
+	if($html.is(":animated")) return;
+	if(e.originalEvent.deltaY > 0){
+		if(page== lastPage) return;
+		page++;
+	}else if(e.originalEvent.deltaY < 0){
+		if(page == 1) return;
+		page--;
+	}
+	var posTop = (page-1) * $(window).height();
+	$html.animate({scrollTop : posTop});
+})
 // main_visual swiper영역
 const main_bnr = new Swiper('#main_visual', {
     direction:'horizontal',
@@ -21,13 +42,69 @@ const main_bnr = new Swiper('#main_visual', {
         }
     },
 })
+// main_visual end
 // NEW MENU swiper영역
-const New = new Swiper('#menu_list', {
+// 상품1
+const flake = new Swiper('#menu_list1', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
     slidesPerView:3,
+    pagination: {
+        el:".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 })
+// 상품2
+const tea = new Swiper('#menu_list2', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView:3,
+    loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+    pagination: {
+        el:".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+// 상품3
+const drink = new Swiper('#menu_list3', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView:3,
+    loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+    pagination: {
+        el:".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+// tab menu
+$("#new_menu .wrap .right > div").eq(1).hide();
+$("#new_menu .wrap .right > div").eq(2).hide();
+    $(document).ready(function() {
+        $("#new_menu .wrap .tabs a").click(function(e){
+            e.preventDefault()
+            var i = $(this).index();
+            $("#new_menu .wrap .tabs a").removeClass("active");
+            $("#new_menu .wrap .tabs a").eq(i).addClass("active");
+            $("#new_menu .wrap .right > div").hide();
+            $("#new_menu .wrap .right > div").eq(i).show();
+        })
+    });
+// NEW MENU end
 // SIGNATURE swiper
 const signature = new Swiper('#signature_swiper', {
     // Optional parameters
@@ -47,32 +124,14 @@ const signature = new Swiper('#signature_swiper', {
 // SIGNATURE swiper end
 // EVENT
 // event tab클릭시 해당하는 내용 보이기
-const e_tab = document.querySelectorAll('#event .event_tab > a')
-const e_content = document.querySelectorAll('#event .event_box > div' )
-console.log(e_tab,e_content)
-for(let i of e_tab){i.classList.remove('e_active')}
-e_tab.forEach(function(t,i,a){
-    t.addEventListener('click',function(e){
-        e.preventDefault();
-        for(let i of e_tab){i.classList.remove('e_active')}
-        this[i].classList.add('e_active')
-        for(let i of e_content){i.styke.display='none'}
-        e_content[i].style.display = 'block'
-    })
-})
-
-
-
-
-
-
-
-// //.section형제의 부모대상
-
-// $('#fullpage').fullpage({
-//     scrollBar:true, //스크롤바 표시 유무 true false
-//     scrollingSpeed:2000, //스크롤 속도
-//     navigation:true, //우측의 네비게이션 유무
-//     navigationTooltips:['반얀트리 홈','s2','s3','s4'], //네비게이션의 명칭 지정
-//     showActiveTooltip:true, //네비게이션 명칭이 보이도록 하는 속성
-// })
+$("main #event .right .event_box > div").eq(1).hide();
+    $(document).ready(function() {
+        $("#event .left .event_tab a").click(function(e){
+            e.preventDefault()
+            var i = $(this).index();
+            $("#event .left .event_tab a").removeClass("e_active");
+            $("#event .left .event_tab a").eq(i).addClass("e_active");
+            $("main #event .right .event_box > div").hide();
+            $("main #event .right .event_box > div").eq(i).show();
+        })
+    });
