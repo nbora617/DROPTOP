@@ -1,15 +1,49 @@
-/* fullpage scroll */
-html{overflow: hidden;}
-html, body{width: 100%; height: 100%;}
-body, html {scroll-behavior:smooth;}
+/* fullpage scroll
+html{overflow:hidden;}
+html, body{width:100%; height:100%;}
+body, html {scroll-behavior:smooth;} */
+/* top 버튼 */
+#top {
+    position:fixed; right:30px; bottom:10px;
+    background:none; padding:15px 10px; background:#000;
+    border-radius:10px; display:none;
+}
+/* aside 팝업 */
+aside {
+    position:fixed; right:20px; bottom:100px;
+    display:flex; flex-flow:column nowrap;
+    z-index:999;
+}
+aside div {
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+    padding:15px; background-color:#000; border-radius:10px;
+    margin-bottom:5px;
+}
+aside div:last-child {margin-bottom:0;}
+aside div img {width:20px; height:20px;}
+aside div span {font-size:0.5rem; color:#fff; margin-top:5px;}
 /* main */
-main {width:100%; margin:0 auto;}
+main {min-width:400px;; margin:0 auto;}
 /* main_visual  */
-main #main_visual {height:100vh;}
+/* video 배경 */
+main .video_bg{
+    /* padding: 0; */
+    position: relative; top:0; left:0;
+    width: 100vw; height: 100vh; overflow:hidden;
+    background-color:rgba(0, 0, 0, 0.3); /*살짝 투명한 검정으로 배경색*/
+}
+main video {
+    position:absolute; z-index:-1; 
+    mix-blend-mode:overlay;
+     /* 화면 크기 조정시 비디오 중심축 맞추기 */
+    /* 조건: ★ 비디오의 부모가 vh 또는 px 높이 설정 준비  */
+    left:50%; transform:translateX(-50%);
+}
+main #main_visual {height:100vh; position:relative; top:0; left:0;}
 main #main_visual .swiper-wrapper {position:relative; }
 main #main_visual .swiper-wrapper .swiper-slide {
-    background:url(../images/coffee-beans-917613_1920.jpg) no-repeat center;
-    background-size:cover;
+    /* background:url(../images/coffee-beans-917613_1920.jpg) no-repeat center;
+    background-size:cover; */
 }
 main #main_visual .swiper-wrapper .swiper-slide .txt {
     width:100%; opacity:0; transform:translateY(20px); /* 슬라이드 애니메이션 초기상태 */
@@ -17,7 +51,7 @@ main #main_visual .swiper-wrapper .swiper-slide .txt {
     display:flex; flex-flow:column nowrap; align-items:center; justify-content:center;
     text-align:center;
     /* background:palevioletred; */
-    position:absolute; /* left:25%; */ top:25%;
+    position:absolute; /* left:25%; */ top:40%;
     /* transform: translate(-50%, -50%); */
 }
 main #main_visual .swiper-wrapper .swiper-slide .txt .title {
@@ -43,9 +77,9 @@ main #main_visual .swiper-wrapper .swiper-slide .txt h2 {
     font-size:1.777rem; letter-spacing:-0.02rem; color:#fff;
     line-height:40px;
 }
-main #main_visual .swiper-wrapper .slide1 {/* background:palegoldenrod; */}
-main #main_visual .swiper-wrapper .slide2 {background-color:palevioletred;}
-main #main_visual .swiper-wrapper .slide3 {background-color:pink;}
+main #main_visual .swiper-wrapper .slide1 {}
+main #main_visual .swiper-wrapper .slide2 {}
+main #main_visual .swiper-wrapper .slide3 {}
 main #main_visual .scroll {
     position:absolute; bottom:50px; left:50%; transform: translate(-50%, -50%);
     z-index:999;
@@ -66,6 +100,7 @@ main #main_visual .scroll span::after {
     100%{transform:translateY(20px);}
 }
 /* end main_visual */
+/* section 배경 */
 /* h1 공통디자인 영역 */
 main section h1 {
     font-size:5rem; letter-spacing:-0.04rem; font-weight:800;
@@ -91,7 +126,9 @@ main #new_menu .wrap {
     justify-content:center;
     background:#f1f1f1;
 }
-main #new_menu .wrap .tabs{margin-right:50px;}
+main #new_menu .wrap .tabs{
+    margin-right:50px; margin-top:20px;
+}
 main #new_menu .wrap .tabs a {
     display:block; text-align:center;
     padding:10px;
@@ -106,13 +143,13 @@ main #new_menu .wrap .tabs .active {
     color:#171C8F; border-bottom:1px dashed #171C8F; font-weight:800;
 }
 main #new_menu .wrap .right {
-    display:flex; flex-flow:row nowrap;
+    display:flex; flex-flow:row wrap;
 }
 /* main #new_menu .wrap .right > div {
     display:flex; flex-flow:row wrap;
 } */
 main #new_menu .wrap .right > div .poster {
-    width:350px; height:400px; 
+    max-width:350px; height:400px; 
     border-radius:50px;
     overflow:hidden;
     margin-right:20px;
@@ -129,7 +166,7 @@ main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide {
     margin-right:30px;
 }
 main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_img {
-    width:180px; margin-bottom:10px; border-radius:125px; overflow:hidden;
+    max-width:180px; margin-bottom:10px; border-radius:125px; overflow:hidden;
 }
 main #new_menu .wrap .right > div .swiper .swiper-wrapper .swiper-slide .menu_img:hover {
     animation:scale 0.5s;
@@ -195,7 +232,7 @@ main #signature #signature_swiper {
 }
 /* slide 공통내용 영역 */
 #signature_swiper .swiper-wrapper .swiper-slide .img {
-    width:440px; border-radius:50px;
+    max-width:440px; border-radius:50px;
     overflow:hidden;
     margin-right:60px;
 }
@@ -244,7 +281,7 @@ main #signature #signature_swiper {
 #signature_swiper .swiper-wrapper .slide1 .txt h2 {color:#171C8F;}
 #signature_swiper .swiper-wrapper .slide1 .txt h3 {font-weight:500; }
 #signature_swiper .swiper-wrapper .slide1 .txt p {
-    font-size:1.125rem; line-height:30px;
+    font-size:1.125rem; line-height:30px; letter-spacing:-0.02rem;
 }
 #signature_swiper .swiper-wrapper .slide1 .txt .desc1 {margin-bottom:10px;}
 /* slide2 */
@@ -309,7 +346,9 @@ main #event .left .event_tab a {
 /* main #event .left .event_tab a */.e_active {
     border:none; color:#fff; background:#171C8F;
 }
-main #event .right {text-align:right; width:40%;}
+main #event .left .img {}
+main #event .left .img img {}
+main #event .right {text-align:right; width:600px;}
 main #event .right a {margin-bottom:15px; display:block;}
 main #event .right a span {
     margin-right:5px; 
@@ -339,8 +378,8 @@ main #event .right .event_box > div .e_desc p {font-size:0.75rem; letter-spacing
 /* event end */
 /* store */
 main #store {
-    max-width:1440px; margin:0 auto; height:100vh; 
-    display:flex; flex-flow:column nowrap; 
+    max-width:1440px; margin:0 auto; max-height:100vh; 
+    display:flex; flex-flow:column wrap; 
     justify-content:center; 
 }
 main #store h1 {
@@ -375,7 +414,7 @@ main #store .store_box .right h3 {
     margin-bottom:50px;
 }
 main #store .store_box .right h3 em {
-    font-size:1.777rem; font-weight:500; letter-spacing:-0.02rem;
+    font-size:1.777rem; font-weight:700; letter-spacing:-0.02rem;
     color:#171C8F;
 }
 main #store .store_box .right #searchFrm {}
@@ -385,7 +424,7 @@ main #store .store_box .right #searchFrm fieldset {
     justify-content:space-between; align-items:center;
 }
 main #store.store_box .right #searchFrm fieldset #search {
-    width:calc(100% - 40px); padding:10px;
+    width:calc(100% - 40px); padding:20px;
 }
 main #store .store_box .right #searchFrm fieldset #searchBtn {
     background:none; width:30px; height:30px;
