@@ -1,24 +1,47 @@
-// fullpage scroll
-window.addEventListener("wheel", function(e){
-	e.preventDefault();
-},{passive : false});
-var $html = $("html");
-var page = 1;
-var lastPage = $(".section").length;
-$html.animate({scrollTop:0},10);
+// top버튼
+$(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+            $('#top').fadeIn();
+        } else {
+            $('#top').fadeOut();
+        }
+    });
+    
+    $("#top").click(function() {
+        $('html, body').animate({
+            scrollTop : 0
+        }, 400);
+        return false;
+    });
+});
+// // fullpage scroll + 스크롤시 header 변화
+// window.addEventListener("wheel", function(e){
+// 	e.preventDefault();
+// },{passive : false});
+// var $html = $("html");
+// var page = 1;
+// var lastPage = $(".section").length;
+// $html.animate({scrollTop:0},10);
 
-$(window).on("wheel", function(e){
-	if($html.is(":animated")) return;
-	if(e.originalEvent.deltaY > 0){
-		if(page== lastPage) return;
-		page++;
-	}else if(e.originalEvent.deltaY < 0){
-		if(page == 1) return;
-		page--;
-	}
-	var posTop = (page-1) * $(window).height();
-	$html.animate({scrollTop : posTop});
-})
+// $(window).on("wheel", function(e){
+// 	if($html.is(":animated")) return;
+// 	if(e.originalEvent.deltaY > 0){
+// 		if(page== lastPage) return;
+// 		page++;
+//         $("header").addClass("fixed");
+//         $('header h1 a img').attr('src','./images/main_logo_w.png') /* 로고 이미지변경 */
+//         $('.main_m > li > a').css('color','#fff') /* nav글자색:흰색 */
+// 	}else if(e.originalEvent.deltaY < 0){
+// 		if(page == 1) return;
+// 		page--;
+//         $("header").removeClass("fixed");
+//         $('header h1 a img').attr('src','./images/main_logo.png') /* 로고 원상복구 */
+//         $('.main_m > li > a').css('color','#171C8F') /* nav글자색 원상복구 */
+// 	}
+// 	var posTop = (page-1) * $(window).height();
+// 	$html.animate({scrollTop : posTop});
+// })
 // main_visual swiper영역
 const main_bnr = new Swiper('#main_visual', {
     direction:'horizontal',

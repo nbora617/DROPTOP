@@ -28,102 +28,159 @@
     <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 <body>
-    <header>
-        <h1><a href="#"><img src="./images/main_logo_w.png" alt="드롭탑"></a></h1>
-        <nav>
-            <ul class="main_m">
-                <li>
-                    <a href="#">드롭커피</a>
-                    <ul class="sub_m">
-                        <li><a href="#">드롭탑 이야기</a></li>
-                        <li><a href="#">925 커피</a></li>
-                        <li><a href="#">회사소개</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">메뉴</a>
-                    <ul class="sub_m">
-                        <li><a href="#">신제품</a></li>
-                        <li><a href="#">커피</a></li>
-                        <li><a href="#">음료</a></li>
-                        <li><a href="#">푸드</a></li>
-                        <li><a href="#">케이크</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">매장</a>
-                    <!-- <ul class="sub_m">
-                        <li><a href="#">매장찾기</a></li>
-                    </ul> -->
-                </li>
-                <li>
-                    <a href="#">이벤트</a>
-                    <ul class="sub_m">
-                        <li><a href="#">이벤트 소식</a></li>
-                        <li><a href="#">당첨자 발표</a></li>
-                        <li><a href="#">제휴카드</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">커뮤니티</a>
-                    <ul class="sub_m">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">보도자료</a></li>
-                        <li><a href="#">제작지원</a></li>
-                        <li><a href="#">멀티미디어</a></li>
-                        <li><a href="#">소셜 드롭탑</a></li>
-                        <li><a href="#">고객의 소리</a></li>
-                        <li><a href="#">점주의 소리</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <a href="#">기맹안내</a>
-    </header>
     <aside>
-        <div class="bar on"><span class="active"></span></div>
-        <div class="bar"><span></span></div>
-        <div class="bar"><span></span></div>
-        <div class="bar"><span></span></div>
-        <div class="bar"><span></span></div>
+        <div class="mall"><img src="./images/online_shop.png" alt=""><span>온라인몰</span></div>
+        <div class="talk"><img src="./images/talk.png" alt=""><span>고객문의</span></div>
+        <div class="call"><img src="./images/call.png" alt=""><span>가맹문의</span></div>
     </aside>
+    <button type="button" id="top"><img src="./images/top.png" alt=""></button>
     <main>
-        <!-- main_visual -->
-        <section class="swiper section" id="main_visual">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slide1">
-                    <div class="txt">
-                        <div class="title">
-                            <h1>smart</h1>
-                            <h1 class="center">Special</h1>
-                            <h1>social</h1>
+        <div class="video_bg">
+            <video src="./images/video_1080p.mp4" autoplay muted loop></video>
+            <header>
+                <h1><a href="#"><img src="./images/main_logo.png" alt="드롭탑"></a></h1>
+                <nav>
+                    <ul class="main_m">
+                        <li>
+                            <a href="#">드롭커피</a>
+                            <ul class="sub_m">
+                                <li><a href="#">드롭탑 이야기</a></li>
+                                <li><a href="#">925 커피</a></li>
+                                <li><a href="#">회사소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">메뉴</a>
+                            <ul class="sub_m">
+                                <li><a href="#">신제품</a></li>
+                                <li><a href="#">커피</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">푸드</a></li>
+                                <li><a href="#">케이크</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매장</a>
+                            <!-- <ul class="sub_m">
+                                <li><a href="#">매장찾기</a></li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul class="sub_m">
+                                <li><a href="#">이벤트 소식</a></li>
+                                <li><a href="#">당첨자 발표</a></li>
+                                <li><a href="#">제휴카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">커뮤니티</a>
+                            <ul class="sub_m">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">제작지원</a></li>
+                                <li><a href="#">멀티미디어</a></li>
+                                <li><a href="#">소셜 드롭탑</a></li>
+                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="#">점주의 소리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="link">가맹안내</a>
+                <a href="#" class="m_nav"><img src="./images/m_nav.png" alt="모바일메뉴"></a>
+                <div class="open_nav">
+                    <button type="reset" id="close"><img src="./images/close.png" alt="닫기"></button>
+                    <ul class="m_menu">
+                        <li>
+                            <a href="#">드롭커피</a>
+                            <ul class="sub_m">
+                                <li><a href="#">드롭탑 이야기</a></li>
+                                <li><a href="#">925 커피</a></li>
+                                <li><a href="#">회사소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">메뉴</a>
+                            <ul class="sub_m">
+                                <li><a href="#">신제품</a></li>
+                                <li><a href="#">커피</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">푸드</a></li>
+                                <li><a href="#">케이크</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매장</a>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul class="sub_m">
+                                <li><a href="#">이벤트 소식</a></li>
+                                <li><a href="#">당첨자 발표</a></li>
+                                <li><a href="#">제휴카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">커뮤니티</a>
+                            <ul class="sub_m">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">제작지원</a></li>
+                                <li><a href="#">멀티미디어</a></li>
+                                <li><a href="#">소셜 드롭탑</a></li>
+                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="#">점주의 소리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="btm">
+                        <a href="#">가맹안내</a>
+                        <div class="sns">
+                            <a href="#"><img src="./images/sns1.png" alt="인스타그램"></a>
+                            <a href="#"><img src="./images/sns2.png" alt="네이버블로그"></a>
+                            <a href="#"><img src="./images/sns3.png" alt="유튜브"></a>
                         </div>
-                        <h2>더 스페셜하게,<br>처음부터 끝까지 소비자를 생각한 공정</h2>
                     </div>
                 </div>
-                <div class="swiper-slide slide2">
-                    <div class="txt">
-                        <div class="title">
-                            <h1>special</h1>
-                            <h1 class="center">Social</h1>
-                            <h1>smarts</h1>
+            </header>
+            <!-- main_visual -->
+            <section class="swiper section" id="main_visual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="txt">
+                            <div class="title">
+                                <h1>smart</h1>
+                                <h1 class="center">Special</h1>
+                                <h1>social</h1>
+                            </div>
+                            <h2>더 스페셜하게,<br>처음부터 끝까지 소비자를 생각한 공정</h2>
                         </div>
-                        <h2>더 친근하게,<br>또 보고싶은 다정하고 친절한 매장</h2>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="txt">
+                            <div class="title">
+                                <h1>special</h1>
+                                <h1 class="center">Social</h1>
+                                <h1>smarts</h1>
+                            </div>
+                            <h2>더 친근하게,<br>또 보고싶은 다정하고 친절한 매장</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="txt">
+                            <div class="title">
+                                <h1>social</h1>
+                                <h1 class="center">Smart</h1>
+                                <h1>special</h1>
+                            </div>
+                            <h2>더 스마트하게,<br>카페를 그대로, 집에서도 쉽게 즐기는 스마트 홈 카페</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide slide3">
-                    <div class="txt">
-                        <div class="title">
-                            <h1>social</h1>
-                            <h1 class="center">Smart</h1>
-                            <h1>special</h1>
-                        </div>
-                        <h2>더 스마트하게,<br>카페를 그대로, 집에서도 쉽게 즐기는 스마트 홈 카페</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll"><span>SCROLL DOWN</span></div>
-        </section>
+                <div class="scroll"><span>SCROLL DOWN</span></div>
+            </section>
+        </div>
         <!-- new muenu -->
         <section class="section" id="new_menu">
             <h1>NEW <em>MENU.</em></h1>
@@ -373,7 +430,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide slide3">
-                        <p class="img"><img src="./images/coffee1.png" alt=""></p>
+                        <p class="img"><img src="./images/coffee2.jpg" alt=""></p>
                         <div class="txt">
                             <h2>925 디카페인</h2>
                             <h3>깊은 단맛에 은은한 산미, 초콜릿의 풍미가 부드럽게 어우러진 디카페인 커피</h3>
@@ -485,7 +542,6 @@
             </div>
         </section>
         <!-- store end -->
-        </div>
     </main>
     <!-- footer -->
     <footer class="section">
