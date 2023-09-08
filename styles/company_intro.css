@@ -1,0 +1,51 @@
+main {text-align:center;}
+main .title {padding:50px; margin-bottom:70px;}
+main .title h1 {
+    font-family: Lilita One; font-size: 3.125rem;
+    color:#171C8F; margin-bottom:30px;
+}
+main .title h1 .brnad_tab {
+    display:flex; flex-flow:row nowrap;
+}
+main .title h1 .brnad_tab a {
+    font-size: 1.25rem; font-weight:500;
+    padding:15px 10px; margin-right:20px;
+}
+main .title h1 .brnad_tab a:last-child {margin-right:20px;}
+main .title h1 .brnad_tab .active {
+    color:#171C8F; border-bottom:1px solid #171C8F;
+    font-weight:700;
+}
+/* 브랜드스토리 */
+main .story_bg {
+    background:url(../)
+}
+main .story_bg #brand_story {}
+main .story_bg #brand_story h2 {}
+main .story_bg #brand_story h3 {}
+main .story_bg #brand_story .since {}
+main .story_bg #brand_story .desc {}
+main .story_bg #brand_story .desce em {}
+/* 브랜드키워드 */
+main .story_bg #brand_keyword {}
+main .story_bg #brand_keyword h3 {}
+main .story_bg #brand_keyword .contents {}
+main .story_bg #brand_keyword .contents .box {}
+main .story_bg #brand_keyword .contents .box .key {}
+main .story_bg #brand_keyword .contents .box .desc {}
+/* 브랜드미션 */
+main #brand_mission {}
+main #brand_mission h3 {}
+main #brand_mission p {}
+/* 브랜드 아이덴티티 */
+main #brand_identity {}
+main #brand_identity h2 {}
+main #brand_identity h3 {}
+main #brand_identity p {}
+main #brand_identity p em {}
+main #brand_identity .img {}
+main #brand_identity .img .box img {}
+main #brand_identity .img .box span {}
+main #brand_identity .img .color_box {}
+main #brand_identity .img .color_box span:nth-child(1) {}
+main #brand_identity .img .color_box span:nth-child(2) {}

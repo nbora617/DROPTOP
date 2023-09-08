@@ -108,7 +108,7 @@
 
     main main #signature {align-items:center;}
     main #signature .txt_ani {display:none;}
-    #signature_swiper .swiper-wrapper .swiper-slide {text-align:center;}
+    #signature_swiper .swiper-wrapper .swiper-slide {text-align:center;} 
     #signature_swiper .swiper-wrapper .swiper-slide .img {width:50%;}
     #signature_swiper .swiper-wrapper .swiper-slide .txt >* {margin-bottom:10px;}
     #signature_swiper .swiper-wrapper .swiper-slide .txt {text-align:center;}

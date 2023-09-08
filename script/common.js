@@ -2,7 +2,7 @@
 const sub_m = $('header nav > .main_m > li > .sub_m')
 sub_m.hide();
 $('header nav > .main_m > li').hover(function(){
-    $(this).children("ul").stop().slideToggle(300)
+    $(this).children("ul").stop().slideToggle(500)
 })
 
 // 모바일 메뉴
@@ -26,39 +26,12 @@ $(document).ready(function(){
     //m_menu의 nav클릭시 서브메뉴보이고 다시 클릭하면 숨기기
     $(".m_menu > li > a").click(function(){
         $(this).next().slideToggle(300);
-        // $(this).css('backgroundColor','#d3d2d2')
-        // $(this).find('.fa-solid').css('transform','rotate(270deg)')
-        // $(this).find('.fa-solid').css('transition','0.5s')
-      // $(this).next().slideDown(300);
         $("ul li a").not(this).next().slideUp(300);
         return false;
     });
     $("ul li a").eq(0).trigger("click");
 })
 
-
-// 스크롤시 색상이 변하는 header
-// var header = $("header").offset().top;
-// $(window).scroll(function() {
-//     var window = $(this).scrollTop();
-//     if(header <= window) {
-//         $("header").addClass("fixed");
-//     } else {
-//         $("header").removeClass("fixed");
-//     }
-// })
-
-// let header = document.querySelector(".header");
-// let headerHeight = header.offsetHeight;
-
-// window.onscroll = function () {
-//   let windowTop = window.scrollY;
-//   if (windowTop >= headerHeight) {
-//     header.classList.add("drop");
-//   } else {
-//     header.classList.remove("drop");
-//   }
-// };
 
 
 // $(function(){

@@ -3,8 +3,10 @@ $(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 500) {
             $('#top').fadeIn();
+            $('aside').fadeIn();
         } else {
             $('#top').fadeOut();
+            $('aside').fadeOut();
         }
     });
     
@@ -15,33 +17,7 @@ $(function() {
         return false;
     });
 });
-// // fullpage scroll + 스크롤시 header 변화
-// window.addEventListener("wheel", function(e){
-// 	e.preventDefault();
-// },{passive : false});
-// var $html = $("html");
-// var page = 1;
-// var lastPage = $(".section").length;
-// $html.animate({scrollTop:0},10);
 
-// $(window).on("wheel", function(e){
-// 	if($html.is(":animated")) return;
-// 	if(e.originalEvent.deltaY > 0){
-// 		if(page== lastPage) return;
-// 		page++;
-//         $("header").addClass("fixed");
-//         $('header h1 a img').attr('src','./images/main_logo_w.png') /* 로고 이미지변경 */
-//         $('.main_m > li > a').css('color','#fff') /* nav글자색:흰색 */
-// 	}else if(e.originalEvent.deltaY < 0){
-// 		if(page == 1) return;
-// 		page--;
-//         $("header").removeClass("fixed");
-//         $('header h1 a img').attr('src','./images/main_logo.png') /* 로고 원상복구 */
-//         $('.main_m > li > a').css('color','#171C8F') /* nav글자색 원상복구 */
-// 	}
-// 	var posTop = (page-1) * $(window).height();
-// 	$html.animate({scrollTop : posTop});
-// })
 // main_visual swiper영역
 const main_bnr = new Swiper('#main_visual', {
     direction:'horizontal',
@@ -72,11 +48,13 @@ const flake = new Swiper('#menu_list1', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:3,
-    pagination: {
+    slidesPerView:4,
+    spaceBetween:20,
+    loopAdditionalSlides : 1,
+/*     pagination: {
         el:".swiper-pagination",
         type: "fraction",
-    },
+    }, */
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -87,12 +65,13 @@ const tea = new Swiper('#menu_list2', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:3,
-    loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
-    pagination: {
+    slidesPerView:4,
+    /* loopAdditionalSlides : 1, */ // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+    spaceBetween:20,
+    /*  pagination: {
         el:".swiper-pagination",
         type: "fraction",
-    },
+    }, */
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -103,28 +82,29 @@ const drink = new Swiper('#menu_list3', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:3,
-    loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
-    pagination: {
+    slidesPerView:4,
+    /* loopAdditionalSlides : 1,  */
+    spaceBetween:20,
+/*     pagination: {
         el:".swiper-pagination",
         type: "fraction",
-    },
+    }, */
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 })
 // tab menu
-$("#new_menu .wrap .right > div").eq(1).hide();
-$("#new_menu .wrap .right > div").eq(2).hide();
+$("#new_menu .btm > div").eq(1).hide();
+$("#new_menu .btm > div").eq(2).hide();
     $(document).ready(function() {
-        $("#new_menu .wrap .tabs a").click(function(e){
+        $("#new_menu .top .new_tab a").click(function(e){
             e.preventDefault()
             var i = $(this).index();
-            $("#new_menu .wrap .tabs a").removeClass("active");
-            $("#new_menu .wrap .tabs a").eq(i).addClass("active");
-            $("#new_menu .wrap .right > div").hide();
-            $("#new_menu .wrap .right > div").eq(i).show();
+            $("#new_menu .top .new_tab a").removeClass("active");
+            $("#new_menu .top .new_tab a").eq(i).addClass("active");
+            $("#new_menu .btm > div").hide();
+            $("#new_menu .btm > div").eq(i).show();
         })
     });
 // NEW MENU end
@@ -158,3 +138,17 @@ $("main #event .right .event_box > div").eq(1).hide();
             $("main #event .right .event_box > div").eq(i).show();
         })
     });
+
+// 인스타그램 슬라이드
+const insta = new Swiper('#insta_slide', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView:4,
+    // loopAdditionalSlides:1,
+    spaceBetween:20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
