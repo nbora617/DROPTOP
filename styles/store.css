@@ -1,0 +1,88 @@
+main {min-width:400px;}
+main .title_bg {
+    background:url(../images/store_bg.jpg) no-repeat center;
+    background-size:cover; height:300px;
+    background-color: transparent;
+    position:relative;
+    display:flex; flex-flow:column nowrap; 
+    justify-content:center; align-items:center;
+    margin-bottom:100px;
+}
+/* 배경투명도 */
+main .title_bg:before {
+    position: absolute;
+    content: "";
+    top:0px; left:0px; width: 100%; height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+main .title_bg h1 {
+    position:relative;
+    font-family: Lilita One; font-size: 3.125rem;
+    color:#171C8F; 
+    margin-bottom:10px;
+}
+main .title_bg h2 {
+    position:relative;
+    font-size:1.125rem; 
+}
+main #store {
+    max-width:1000px; margin:0 auto;
+    /*   display:flex; flex-flow:column nowrap;
+    align-items:center; */
+    margin-bottom:100px;
+}
+main #store .store_top {
+    display:flex;
+    background:#f1f1f1; padding:20px;
+}
+main #store .store_top select {
+    width:250px; 
+    background:#fff; padding:5px;
+    color:#757373;
+    border:1px solid #aaa; border-radius:50px;
+    margin-right:20px;
+}
+main #store .store_top select option:checked,
+main #store .store_top select option:hover {background:#f1f1f1;}
+main #store .store_top #searchFrm {}
+main #store .store_top #searchFrm fieldset {
+    display:flex; flex-flow:row nowrap; 
+    justify-content:space-between; align-items:center;
+    width:500px; padding:5px 10px;
+    background:#fff;
+    border:1px solid #aaa; border-radius:50px;
+}
+main #store .store_top #searchFrm fieldset #search {
+    width:calc(100% - 40px);
+}
+main #store .store_top #searchFrm fieldset #searchBtn {
+    width:20px; height:20px; background:none;
+}
+main #store .store_top #searchFrm fieldset #searchBtn img {width:100%;}
+main #store .store_btm {display:flex;}
+main #store .store_btm .left {}
+main #store .store_btm .left .s_desc {
+    width:300px;
+    padding:10px;
+    border-bottom:1px solid #969696;
+}
+main #store .store_btm .left .s_desc h2 {
+    font-size:0.875rem; font-weight:600;
+    display:flex; align-items:center;
+}
+main #store .store_btm .left .s_desc h2 img {
+    width:20px; height:20px;
+    margin-right:5px;
+}
+main #store .store_btm .left .s_desc h3 {
+    font-size:0.875rem;
+    margin:8px 0;
+}
+main #store .store_btm .left .s_desc p {font-size:0.875rem;}
+#store .store_btm .left .s_active {
+    background:#d9d9d9;
+}
+#store .store_btm .map {
+    width:700px; height:510px;
+    background:#D9D9D9;
+}

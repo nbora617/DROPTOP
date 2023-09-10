@@ -18,6 +18,20 @@ $(function() {
     });
 });
 
+// <!--스크롤 애니메이션-->
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('section').each( function(){
+            var bottom_of_element = $(this).offset().top /* + $(this).outerHeight() */;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1'},700);
+            }
+            
+        }); 
+    });
+});
+
 // main_visual swiper영역
 const main_bnr = new Swiper('#main_visual', {
     direction:'horizontal',

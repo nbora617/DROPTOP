@@ -31,16 +31,18 @@
     <!-- header.php -->
     <main>
         <div class="title">
-            <h1>DROPTOP</h1>
+            <div class="title_bg">
+                <h1>DROPTOP</h1>
+            </div>
             <div class="brand_tab">
                 <a href="#">드롭탑 스토리</a>
                 <a href="#">아이덴티티</a>
                 <a href="#">히스토리</a>
-                <a href="#">오는 길</a>
+                <a href="store.html">오는 길</a>
             </div>
         </div>
         <div class="story_bg">
-            <section id="brand_story">
+            <div id="brand_story">
                 <h2>Brand story</h2>
                 <h3>드롭탑과 함께한 특별한 기억이 있나요?</h3>
                 <p class="since">since.2010</p>
@@ -48,33 +50,39 @@
                     지친 몸과 마음을 쉬기 위해 정상에서 마시는 커피 한잔을 일컫는 
                     <em>‘드롭탑(Droptop)’ 최고의 장소에서 최상의 커피를 마신다</em>는 컨셉에서 탄생되었습니다.
                 </p>
-            </section>
-        </div>    
+            </div>
+        </div>
+        <section id="brand_mission">
+            <div class="left">
+                <h3>Brand Misson</h3>
+                <p>다른 맛, 다른 공간, 다른 서비스, 다른 철학으로 카페의 <em>새로운 트렌드를 여는 Different 프리미엄 카페</em>입니다.</p>
+            </div>
+            <div class="right">
+                <img src="./images/mission1.png" alt="">
+                <img src="./images/mission2.png" alt="">
+            </div>
+        </section>    
         <section id="brand_keyword">
             <h3>#Brand Keyword</h3>
             <div class="contents">
                 <div class="box">
-                    <h4>Special</h4>
-                    <p class="key">#더 스페셜하게</p>
-                    <p class="desc">자체 로스팅 기법을 담은 특별한 프로듀싱 원두</p>
+                    <div class="img"><img src="./images/special.png" alt=""></div>
+                    <h4>#Special</h4>
+                    <p><em>#더 스페셜하게</em><br>자체 로스팅 기법을 담은 특별한 프로듀싱 원두</p>
                 </div>
                 <div class="box">
-                    <h4>Smart</h4>
-                    <p class="key">#더 스마트하게</p>
-                    <p class="desc">집에서도 쉽게 즐기는 스마트 홈 카페</p>
+                    <div class="img"><img src="./images/smart.png" alt=""></div>
+                    <h4>#Smart</h4>
+                    <p><em>#더 스마트하게</em><br>카페를 그대로 집에서도 쉽게 즐기는 스마트 홈 카페</p>
                 </div>
                 <div class="box">
-                    <h4>Special</h4>
-                    <p class="key">#더 친근하게</p>
-                    <p class="desc">또 보고 싶은 다정하고 친절한 매장</p>
+                    <div class="img"><img src="./images/social.png" alt=""></div>
+                    <h4>#Special</h4>
+                    <p><em>#더 친근하게</em><br>누구와 함께해도 더 즐겁고, 또 보고 싶은 다정하고 친절한 매장</p>
                 </div>
             </div>
         </section>
-        <section id="brand_mission">
-            <h3>Brand Misson</h3>
-            <p>다른 맛, 다른 공간, 다른 서비스, 다른 철학으로 카페의 새로운 트렌드를 여는 Different 프리미엄 카페입니다.</p>
-        </section>
-        <section class="brand_identity">
+        <section id="brand_identity">
             <h2>Brand identity</h2>
             <h3>LOGO</h3>
             <p>
@@ -83,10 +91,198 @@
             <div class="img">
                 <div class="box"><img src="./images/story_logo1.png" alt=""><span>Symbolmark</span></div>
                 <div class="box"><img src="./images/story_logo2.png" alt=""><span>Signature</span></div>
-                <div class="color_box"><span>Pantone 2746C</span><span>Color</span></div>
+            </div>
+            <h3>COLOR</h3>
+            <p>
+                <em>파랑색은 신뢰와 안정성을, 주황색은 창의성과 활기</em>를 상징하며, 이 두 컬러는 제품에 <em>따뜻한 분위기와 경쾌함</em>을 더합니다.
+            </p>
+            <div class="color">
+                <div class="box"><span>Pantone 2746C</span><span>#171C8F</span></div>
+                <div class="box"><span>Light Orange</span><span>#FB6F14</span></div>
+            </div>
+        </section>
+        <section id="brand_history">
+            <div class="swiper section" id="history_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="title">
+                            <h2>Brand History</h2>
+                            <h3>고객을 위해 항상 맛을 연구하는
+                                드롭탑의 역사를 소개합니다.</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history1.png" alt="">
+                                <span>2010</span>
+                            </div>
+                            <p>브랜드 아이덴티티 정립“원두 & 베이커리 &  샌드위치” 개발팀 운영</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history2.png" alt="">
+                                <span>2011</span>
+                            </div>
+                            <p>DROPTOP 상표 출원 / 프렌차이즈 사업 진출 / 직영, 가맹 1호점 개점</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history3.png" alt="">
+                                <span>2012</span>
+                            </div>
+                            <p>제 1회 가맹사업설명회 개최 / ‘2012 소비자 신뢰 대표 브랜드' 프랜차이즈 커피전문점 부문 대상 수상</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide5">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history1.png" alt="">
+                                <span>2013</span>
+                            </div>
+                            <p>드롭탑 100호점 돌파 / 드롭치노 신제품 2종 출시 / '드롭탑 오포인트 멤버십 카드' 출시
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide6">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history2.png" alt="">
+                                <span>2014</span>
+                            </div>
+                            <p>카페드롭탑 & 기아자동차 온,오프라인 공동 프로모션 / 프랜차이즈 커피전문점 부문 3년 연속 대상 수상</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide7">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history3.png" alt="">
+                                <span>2015</span>
+                            </div>
+                            <p>해외 진출 : 중국 상해 1호점 오픈 / 서울특별시 한국프랜차이즈 에너지대상 수상</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide8">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history1.png" alt="">
+                                <span>2016</span>
+                            </div>
+                            <p>드롭탑 전용 모바일 애플리케이션 개발 런칭 / 커피전문점 최초 '콜드브루 핫' 출시</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide9">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history2.png" alt="">
+                                <span>2017</span>
+                            </div>
+                            <p>캄보디아, 싱가폴, 말레이시아 마스터 프랜차이즈 계약 체결</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide10">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history3.png" alt="">
+                                <span>2018</span>
+                            </div>
+                            <p>국내 커피전문점 최초, 한국 미술계 거장 이왈종 화백 갤러리 전시 / 유럽 전통 자연식 프리미엄 디저트 '유로파이' 출시</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide11">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history1.png" alt="">
+                                <span>2019</span>
+                            </div>
+                            <p>항일여성독립기념 사업회 업무협약 / 925 스페셜티 블렌드 2종 런칭 및 상표등록 / 925 스틱커피 출시</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history2.png" alt="">
+                                <span>2020</span>
+                            </div>
+                            <p>프리미엄 마카롱 ‘드롭탑 뚱카롱’ 출시 / 싱글오리진 원두 MD 4종 출시 / 드롭탑 리브랜딩, 신규BI 배포</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide13">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./images/history3.png" alt="">
+                                <span>2021</span>
+                            </div>
+                            <p>헬시 프리미엄 카페 드롭탑 강남역점 그랜드 오픈</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
     </main>
     <!-- footer.php -->
+
+    <!-- 외부스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="./script/common.js"></script>
+    <!-- 내부스크립트 -->
+    <script>
+        //역사 swipwer
+        const history = new Swiper('#history_swiper', {
+        slidesPerView:4,
+        // loopAdditionalSlides:1,
+        spaceBetween:20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+        activeIndexChange : function() {
+        if (this.realIndex == 0) {
+                this.allowSlidePrev = false;
+            } else {
+                this.allowSlidePrev = true;
+            }
+            },
+        }
+        })
+        const tab = document.querySelectorAll('.title .brand_tab a')
+        const section = document.querySelectorAll('section')
+        console.log(tab, section)
+        tab[0].addEventListener('click',function(e){
+            e.preventDefault()
+            window.scrollTo(0, section[0].offsetTop)
+        })
+        tab[1].addEventListener('click',function(e){
+            e.preventDefault()
+            window.scrollTo(0, section[2].offsetTop)
+        })
+        tab[2].addEventListener('click',function(e){
+            e.preventDefault()
+            window.scrollTo(0, section[3].offsetTop)
+        })
+
+        // <!--스크롤 애니메이션-->
+        $(document).ready(function() {
+            $(window).scroll( function(){
+                $('section').each( function(i){
+                    var bottom_of_element = $(this).offset().top /* + $(this).outerHeight() */;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if( bottom_of_window > bottom_of_element ){
+                        $(this).animate({'opacity':'1'},700);
+                    }
+                    
+                }); 
+            });
+        });
+
+    </script>
 </body>
 </html>

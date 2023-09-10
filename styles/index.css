@@ -101,6 +101,7 @@ main #main_visual .scroll span::after {
 /* end main_visual */
 /* section 배경 */
 /* h1 공통디자인 영역 */
+main section {opacity:0;}
 main section h1 {
     font-size:5rem; letter-spacing:-0.04rem; font-weight:800;
     font-family: 'Lilita One', cursive;
@@ -123,7 +124,7 @@ main #new_menu .top {
     justify-content:space-between; align-items:flex-end;
     margin-bottom:50px;
 }   
-main #new_menu .top h1 {}
+main #new_menu .top h1 {margin-left:100px;}
 main #new_menu .top h1 em {}
 
 main #new_menu .top .new_tab {margin-right:150px;}
@@ -379,8 +380,9 @@ main #instagram {
 }
 main #instagram .title {margin-bottom:50px;}
 main #instagram h2 {
-    font-weight:700;
-    font-size: 2.5rem; text-align:center; color:#171C8F;
+    font-weight:600;
+    font-size: 2rem; text-align:center; color:#171C8F;
+    margin-top:-20px;
 }
 main #instagram #insta_slide {width:100%;}
 main #instagram #insta_slide .swiper-wrapper {}

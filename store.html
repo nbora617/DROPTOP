@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장찾기 | 드롭탑</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- 글꼴 --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <!-- 외부스타일시트 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/store.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body>
+    <main>
+        <div class="title_bg">
+            <h1>DROPTOP STORE</h1>
+            <h2>*간편하게 드롭탑의 매장을 검색해 보세요.</h2>
+        </div>
+        <section id="store">
+            <div class="store_top">
+                <select name="si/do" id="region">
+                    <option value="si/do">시/도</option>
+                    <option value="seoul">서울특별시</option>
+                    <option value="incheon">인천광역시</option>
+                    <option value="gyeonggi-do">경기도</option>
+                    <option value="Gangwon-do">강원도</option>
+                </select>
+                <select name="gu/gun" id="region">
+                    <option value="si/do">구/군</option>
+                    <option value="seoul">연수구</option>
+                    <option value="incheon">부평구</option>
+                    <option value="gyeonggi-do">남동구</option>
+                    <option value="Gangwon-do">미추홀구</option>
+                </select>
+                <form action="#" method="get" id="searchFrm">
+                    <fieldset>
+                        <legend class="skip">검색</legend>
+                        <input type="text" id="search" placeholder="매장명 또는 주소를 입략하세요.">
+                        <button type="submit" id="searchBtn"><img src="./images/search.png" alt="검색"></button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="store_btm">
+                <div class="left">
+                    <div class="s_desc s_active">
+                        <h2><img src="./images/renew_dicon.png" alt="">인천한림병원점</h2>
+                        <h3>인천 계양구 작전동한림병원</h3>
+                        <p>-</p>
+                    </div>
+                    <div class="s_desc">
+                        <h2><img src="./images/renew_dicon.png" alt="">인하대점</h2>
+                        <h3>인천 미추홀구 용현동 1층</h3>
+                        <p>032-000-0000</p>
+                    </div>
+                    <div class="s_desc">
+                        <h2><img src="./images/renew_dicon.png" alt="">인천예술회관점</h2>
+                        <h3>인천 남동구 구월동 1126-4번지 1층 </h3>
+                        <p>032-000-0000</p>
+                    </div>
+                    <div class="s_desc">
+                        <h2><img src="./images/renew_dicon.png" alt="">인천한림병원점</h2>
+                        <h3>인천 계양구 작전동한림병원</h3>
+                        <p>032-000-0000</p>
+                    </div>
+                    <div class="s_desc">
+                        <h2><img src="./images/renew_dicon.png" alt="">인하대점</h2>
+                        <h3>인천 미추홀구 용현동 1층</h3>
+                        <p>032-000-0000</p>
+                    </div>
+                    <div class="s_desc">
+                        <h2><img src="./images/renew_dicon.png" alt="">인천예술회관점</h2>
+                        <h3>인천 남동구 구월동 1126-4번지 1층 </h3>
+                        <p>032-000-0000</p>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 외부스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="./script/common.js"></script>
+    <!-- 내부스크립트 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	bcb445c70dbd20f78bf7299c3f10de08"></script>
+    <script>
+        const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        let options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.5152794,127.0193498), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+        let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    </script>
+</body>
+</html>
