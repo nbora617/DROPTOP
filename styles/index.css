@@ -19,6 +19,7 @@ aside div span {font-size:0.625rem; color:#fff; margin-top:5px;}
 #top {
     position:fixed; right:20px; bottom:50px;
     width:50px; height:50px; display:none;
+    background:none;
 }
 #top img {width:100%;}
 /* main */
@@ -28,7 +29,7 @@ main {min-width:400px; margin:0 auto;}
 main .video_bg{
     /* padding: 0; */
     position: relative; top:0; left:0;
-    width:100vw; height: 100vh; overflow:hidden;
+    width:100vw; height:100vh; overflow:hidden;
     background-color:rgba(0, 0, 0, 0.3); /* 동영상 어두운 투명도 적용 */
 }
 main video {
@@ -103,36 +104,37 @@ main #main_visual .scroll span::after {
 /* h1 공통디자인 영역 */
 main section {opacity:0;}
 main section h1 {
-    font-size:5rem; letter-spacing:-0.04rem; font-weight:800;
+    font-size:4.5rem; letter-spacing:-0.04rem; font-weight:800;
     font-family: 'Lilita One', cursive;
     margin-bottom:33px;
 }
 main section h1 em {
-    font-size:5rem; letter-spacing:-0.04rem; font-weight:800;
+    font-size:4.5rem; letter-spacing:-0.04rem; font-weight:800;
     font-family: 'Lilita One', cursive;
     color:#171C8F;
 }
 /* h1 공통디자인 영역 end  */
 /* New menu */
 main #new_menu {
+    padding:0 30px;
     max-width:1440px; margin:0 auto;
     height:100vh;
     display:flex; flex-flow:column nowrap; justify-content:center;
 }
 main #new_menu .top {
+    width:100%;
     display:flex; flex-flow:row wrap; 
     justify-content:space-between; align-items:flex-end;
     margin-bottom:50px;
 }   
-main #new_menu .top h1 {margin-left:100px;}
+main #new_menu .top h1 {margin-left:50px;}
 main #new_menu .top h1 em {}
-
-main #new_menu .top .new_tab {margin-right:150px;}
+main #new_menu .top .new_tab {margin-right:100px;}
 main #new_menu .top .new_tab a {
     display:inline-block; text-align:center;
-    width:120px; padding:10px 20px; 
+    width:105px; padding:10px 20px; 
     border-radius:50px; border:1px solid #aaa;
-    font-size:1.125rem; font-weight:500; margin-right:20px;
+    font-weight:500; margin-right:20px;
     background:#f1f1f1;   
 }
 main #new_menu .top .new_tab a:last-child {margin-right:0;}
@@ -216,7 +218,7 @@ main #signature .txt_ani img {
     animation: rotate_image 7s linear infinite;transform-origin: 50% 50%;
 }
 main #signature h1 {margin-bottom:-30px; margin-left:50px; z-index:100;}
-main #signature h1 em {font-size:4.375rem; display:block;}
+main #signature h1 em {display:block;}
 main #signature #signature_swiper {
     max-width:100%; height:auto;
     background:#f1f1f1;
@@ -228,11 +230,11 @@ main #signature #signature_swiper {
 }
 /* slide 공통내용 영역 */
 #signature_swiper .swiper-wrapper .swiper-slide .img {
-    max-width:440px; border-radius:50px;
+    width:400px; height:400px; border-radius:50px;
     overflow:hidden;
     margin-right:60px;
 }
-#signature_swiper .swiper-wrapper .swiper-slide .img img {width:100%;}
+#signature_swiper .swiper-wrapper .swiper-slide .img img {width:100%; height:100%;}
 #signature_swiper .swiper-wrapper .swiper-slide .txt {
     align-self:flex-end; max-width:450px;
 }
@@ -272,7 +274,7 @@ main #signature #signature_swiper {
 /* slide 개별 디자인 영역 */
 /* slide1 */
 #signature_swiper .swiper-wrapper .slide1 {}
-#signature_swiper .swiper-wrapper .slide1 .txt {}
+#signature_swiper .swiper-wrapper .slide1 .txt {margin-top:20px;}
 
 #signature_swiper .swiper-wrapper .slide1 .txt h2 {color:#171C8F;}
 #signature_swiper .swiper-wrapper .slide1 .txt h3 {font-weight:500; }
@@ -319,6 +321,7 @@ main #signature #signature_swiper {
 /* signature end */
 /* event */
 main #event {
+    padding:0 30px;
     max-width:1440px; margin:0 auto;
     height:100vh;
     display:flex; flex-flow:row wrap; 
@@ -327,9 +330,7 @@ main #event {
 main #event .left {
     display:flex; flex-flow:column nowrap; align-items:flex-start;
 }
-main #event .left h1 {
-    margin-bottom:40px;
-}
+main #event .left h1 {margin-bottom:40px;}
 main #event .left h1 em {}
 main #event .left .event_tab {margin-bottom:30px;}
 main #event .left .event_tab a {
@@ -343,7 +344,7 @@ main #event .left .event_tab .e_active {
 }
 main #event .left .img {}
 main #event .left .img img {}
-main #event .right {text-align:right; width:600px;}
+main #event .right {text-align:right; width:570px;}
 main #event .right a {margin-bottom:15px; display:block;}
 main #event .right a span {
     margin-right:5px; 
@@ -373,6 +374,7 @@ main #event .right .event_box > div .e_desc p {font-size:0.75rem; letter-spacing
 /* event end */
 /* instagram */
 main #instagram {
+    padding:30px;
     max-width:1440px; margin:0 auto;
     height:100vh;
     display:flex; flex-flow:column wrap; 
@@ -381,7 +383,7 @@ main #instagram {
 main #instagram .title {margin-bottom:50px;}
 main #instagram h2 {
     font-weight:600;
-    font-size: 2rem; text-align:center; color:#171C8F;
+    font-size:1.777rem; text-align:center; color:#171C8F;
     margin-top:-20px;
 }
 main #instagram #insta_slide {width:100%;}

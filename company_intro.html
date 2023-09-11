@@ -236,9 +236,16 @@
     <script>
         //역사 swipwer
         const history = new Swiper('#history_swiper', {
-        slidesPerView:4,
-        // loopAdditionalSlides:1,
+        slidesPerView:1,
+        loopAdditionalSlides:1,
         spaceBetween:20,
+         //반응형 페이지 수
+        breakpoints:{
+            500:{slidesPerView:2, centeredSlides:true,},
+            700:{slidesPerView:3, centeredSlides:true,},
+            1000:{slidesPerView:4, centeredSlides:true,},
+            1400:{slidesPerView:5, centeredSlides:true,}
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

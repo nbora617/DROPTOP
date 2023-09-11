@@ -62,13 +62,18 @@ const flake = new Swiper('#menu_list1', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:4,
+    slidesPerView:1,
     spaceBetween:20,
     loopAdditionalSlides : 1,
 /*     pagination: {
         el:".swiper-pagination",
         type: "fraction",
     }, */
+    breakpoints:{
+        500:{slidesPerView:2, centeredSlides:true,},
+        700:{slidesPerView:3, centeredSlides:true,},
+        1400:{slidesPerView:4, centeredSlides:true,}
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -79,13 +84,18 @@ const tea = new Swiper('#menu_list2', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:4,
+    slidesPerView:1,
     /* loopAdditionalSlides : 1, */ // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
     spaceBetween:20,
     /*  pagination: {
         el:".swiper-pagination",
         type: "fraction",
     }, */
+    breakpoints:{
+        500:{slidesPerView:2, centeredSlides:true,},
+        700:{slidesPerView:3, centeredSlides:true,},
+        1400:{slidesPerView:4, centeredSlides:true,}
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -96,13 +106,18 @@ const drink = new Swiper('#menu_list3', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:4,
+    slidesPerView:1,
     /* loopAdditionalSlides : 1,  */
     spaceBetween:20,
 /*     pagination: {
         el:".swiper-pagination",
         type: "fraction",
     }, */
+    breakpoints:{
+        500:{slidesPerView:2, centeredSlides:true,},
+        700:{slidesPerView:3, centeredSlides:true,},
+        1400:{slidesPerView:4, centeredSlides:true,}
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -158,9 +173,15 @@ const insta = new Swiper('#insta_slide', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    slidesPerView:4,
+    slidesPerView:1,
     // loopAdditionalSlides:1,
     spaceBetween:20,
+     //반응형 페이지 수
+    breakpoints:{
+        700:{slidesPerView:2, centeredSlides:true,},
+        1000:{slidesPerView:3, centeredSlides:true,},
+        1400:{slidesPerView:4, centeredSlides:true,}
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

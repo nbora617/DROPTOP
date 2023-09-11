@@ -15,14 +15,15 @@ header h1 {width:205px; height:45px;}
 header h1 a {}
 header h1 a img {width:100%;}
 header nav {
-    padding:0 50px;
+    width:60%;
     display:flex; flex-flow:row nowrap; 
-    justify-content:space-between;
+    justify-content:center;
     /* line-height:100px; */
     position:relative;
 }
 header nav > .main_m {display:flex; flex-flow:row nowrap;}
 header nav > .main_m > li {
+    background:paleturquoise;
     line-height:100px; margin-right:20px;
 }
 header nav > .main_m > li:last-child {margin-right:0;}
@@ -42,19 +43,24 @@ header nav > .main_m > li > a::after{
 header nav > .main_m > li > a:hover::after {transform:scaleX(1);}
 header nav > .main_m > li > .sub_m {
     position:absolute; left:50%; top:100px; transform:translate(-50%, -50%);
-    /* width:100%;  *//* absolute로 인해 내용만큼만 크기 인식 */
+    width:100%; /* absolute로 인해 내용만큼만 크기 인식 */
     z-index:999;
-    display:flex; flex-flow:row nowrap; align-items:center;
+    display:flex; flex-flow:row nowrap; 
+    align-items:center; justify-content:center;
     background:#fff;
 }
-header nav > .main_m > li:last-child > .sub_m {left:50%; width:93%;}
+header nav > .main_m > li:last-child > .sub_m {
+    left:50%;
+    background:paleturquoise;
+}
+header nav > .main_m > li:last-child > .sub_m > li {}
 header nav > .main_m > li > .sub_m > li {}
 header nav > .main_m > li > .sub_m > li:last-child {margin-right:0;}
 header nav > .main_m > li > .sub_m > li > a {
     font-weight:500; padding:10px 20px;
     display:block;
 }
-header nav > .main_m > li:nth-child(2) > .sub_m > li > a {width:110%;}
+header nav > .main_m > li:nth-child(2) > .sub_m > li > a {}
 header nav > .main_m > li > .sub_m > li > a:hover {
     background:#171C8F; color:#fff; font-weight:700;
 }
@@ -140,6 +146,7 @@ header .open_nav .btm .link_btn .sns a:last-child {margin-right:0;}
 header .open_nav .btm .link_btn .sns a img {width:100%;}
 /* footer */
 footer {
+    padding:0 30px;
     max-width:1440px; padding:0 30px; margin:0 auto;
     display:flex; flex-flow:row wrap; 
     align-items: center; justify-content:space-between;
@@ -150,12 +157,12 @@ footer .left {
 }
 footer .left h1 {width:170px;}
 footer .left h1 a {}
-footer .left h1 a {width:100%;}
+footer .left h1 a img {width:100%;}
 footer .left .f_sns {}
 footer .left .f_sns a {width:25px; height:25px; margin-right:5px;}
 footer .left .f_sns a:last-child {margin-right:0;}
 footer .left .f_sns a img {}
-footer .right {max-width:1000px;}
+footer .right {max-width:70%;}
 footer .right.f_b_left {
     max-width:1000px; margin-right:50px;
     display:flex; flex-flow:column wrap; justify-content:space-around;

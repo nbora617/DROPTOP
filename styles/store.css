@@ -44,11 +44,11 @@ main #store .store_top select {
 }
 main #store .store_top select option:checked,
 main #store .store_top select option:hover {background:#f1f1f1;}
-main #store .store_top #searchFrm {}
+main #store .store_top #searchFrm {width:500px;}
 main #store .store_top #searchFrm fieldset {
     display:flex; flex-flow:row nowrap; 
     justify-content:space-between; align-items:center;
-    width:500px; padding:5px 10px;
+    padding:5px 10px;
     background:#fff;
     border:1px solid #aaa; border-radius:50px;
 }
@@ -82,7 +82,7 @@ main #store .store_btm .left .s_desc p {font-size:0.875rem;}
 #store .store_btm .left .s_active {
     background:#d9d9d9;
 }
-#store .store_btm .map {
+#store .store_btm #map {
     width:700px; height:510px;
     background:#D9D9D9;
 }

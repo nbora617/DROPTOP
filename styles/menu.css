@@ -30,7 +30,7 @@ main .menu_tab {
     margin-bottom:50px;
 }
 main .menu_tab a {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     padding:5px 10px; margin-right:20px;
     color:#000; transition:all 0.3s linear;
 }
@@ -54,7 +54,7 @@ main #menu_list .title h3 {
     margin-bottom:10px;
 }
 main #menu_list .title p {
-    color:#757373; line-height:25px;
+    color:#757373; line-height:25px; letter-spacing:-0.02rem;
 }
 main #menu_list .contents {
     display:flex; flex-flow:row wrap;
