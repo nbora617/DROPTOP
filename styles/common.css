@@ -47,7 +47,7 @@ header nav > .main_m > li > .sub_m {
     z-index:999;
     display:flex; flex-flow:row nowrap; 
     align-items:center; justify-content:center;
-    background:#fff;
+    /* background:#fff; */
 }
 header nav > .main_m > li:last-child > .sub_m {
     left:50%;
@@ -59,6 +59,7 @@ header nav > .main_m > li > .sub_m > li:last-child {margin-right:0;}
 header nav > .main_m > li > .sub_m > li > a {
     font-weight:500; padding:10px 20px;
     display:block;
+    background:#fff;
 }
 header nav > .main_m > li:nth-child(2) > .sub_m > li > a {}
 header nav > .main_m > li > .sub_m > li > a:hover {
