@@ -4,17 +4,17 @@ aside {
     display:flex; flex-flow:column nowrap;
     z-index:999;
 }
-aside div {
+aside a {
     display:flex; flex-flow:column nowrap; 
     justify-content:center; align-items:center;
     width:60px; height:60px; background-color:#171C8F; 
     border-radius:50px;
     margin-bottom:8px;
 }
-aside div:last-child {margin-bottom:0;}
-aside div img {width:20px; height:20px;}
-aside div:nth-child(2) img {width:16px;}
-aside div span {font-size:0.625rem; color:#fff; margin-top:5px;}
+aside a:last-child {margin-bottom:0;}
+aside a img {width:20px; height:20px;}
+aside a:nth-child(2) img {width:16px;}
+aside a span {font-size:0.625rem; color:#fff; margin-top:5px;}
 /* top 버튼 ==스크롤하면 나타나기 */
 #top {
     position:fixed; right:20px; bottom:50px;
@@ -23,7 +23,7 @@ aside div span {font-size:0.625rem; color:#fff; margin-top:5px;}
 }
 #top img {width:100%;}
 /* main */
-main {min-width:400px; margin:0 auto;}
+main {min-width:400px; margin:0 auto; overflow:hidden;}
 /* main_visual  */
 /* video 배경 */
 main .video_bg{
@@ -205,21 +205,23 @@ main #new_menu .wrap .right .c3 {}
 /* signature */
 main #signature {
     max-width:1440px; margin:0 auto;
-    position:relative; overflow:hidden; /* txt-_ani 위치설정을 위한 속성 */
+    position:relative; /* overflow:hidden; */ /* txt-_ani 위치설정을 위한 속성 */
     display:flex; flex-flow:column nowrap; justify-content:center;
     height:100vh;
 }
 main #signature .txt_ani {
-    width:535px; height:535px;
-    position:absolute; right:-200px; top:-200px;
+    width:420px; height:420px;
+    position:absolute; right:-150px; top:0;
     z-index:700;
 }
 main #signature .txt_ani img {
-    animation: rotate_image 7s linear infinite;transform-origin: 50% 50%;
+    width:100%; height:100%;
+    animation: rotate_image 15s linear infinite;transform-origin: 50% 50%;
 }
 main #signature h1 {margin-bottom:-30px; margin-left:50px; z-index:100;}
 main #signature h1 em {display:block;}
 main #signature #signature_swiper {
+    padding:50px 0;
     max-width:100%; height:auto;
     background:#f1f1f1;
     z-index:1;
@@ -391,7 +393,7 @@ main #instagram #insta_slide .swiper-wrapper {}
 main #instagram #insta_slide .swiper-wrapper .swiper-slide {
     width:350px; height:350px; border-radius:50px; overflow:hidden;
 }
-main #instagram #insta_slide .swiper-wrapper .swiper-slide img {width:100%;}
+main #instagram #insta_slide .swiper-wrapper .swiper-slide img {width:100%; height:100%;}
 main #instagram #insta_slide .swiper-wrapper .slide1 {}
 main #instagram #insta_slide .swiper-wrapper .slide2 {}
 main #instagram #insta_slide .swiper-wrapper .slide3 {}

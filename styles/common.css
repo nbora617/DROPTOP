@@ -113,15 +113,15 @@ header .open_nav .btm .pop_icon {
     display:flex; flex-flow:row nowrap; justify-content:space-between;
     padding:0 20px; margin-bottom:35px;;
 }
-header .open_nav .btm .pop_icon > div {
+header .open_nav .btm .pop_icon > a {
     display:flex; flex-flow:column nowrap; 
     justify-content:center; align-items:center;
     /* width:calc(25% - 10px); */ width:25%; margin-right:10px;
     padding:15px 10px; background-color:#171C8F; 
 }
-header .open_nav .btm .pop_icon > div:last-child {margin-right:0;}
-header .open_nav .btm .pop_icon > div > img {width:20px; height:20px;}
-header .open_nav .btm .pop_icon > div > span {
+header .open_nav .btm .pop_icon > a:last-child {margin-right:0;}
+header .open_nav .btm .pop_icon > a > img {width:20px; height:20px;}
+header .open_nav .btm .pop_icon > a > span {
     font-size:0.75rem; color:#fff; margin-top:8px;
 }
 header .open_nav .btm .link_btn {
@@ -143,29 +143,31 @@ header .open_nav .btm .link_btn .sns a:last-child {margin-right:0;}
 header .open_nav .btm .link_btn .sns a img {width:100%;}
 /* footer */
 footer {
-    padding:0 30px;
-    max-width:1440px; padding:0 30px; margin:0 auto;
+    padding:50px 30px;
+    max-width:1440px; margin:0 auto;
     display:flex; flex-flow:row wrap; 
     align-items: center; justify-content:space-between;
 }
 footer .left {
     display:flex; flex-flow:column nowrap; justify-content:space-between;
-    padding:20px; background:#171C8F; margin-right:50px;
+    padding:20px; background:#171C8F; /* margin-right:50px; */
 }
 footer .left h1 {width:170px;}
 footer .left h1 a {}
 footer .left h1 a img {width:100%;}
-footer .left .f_sns {}
-footer .left .f_sns a {width:25px; height:25px; margin-right:5px;}
+footer .left .f_sns {
+    display:flex; flex-flow:row nowrap; 
+}
+footer .left .f_sns a {width:30px; height:30px;}
 footer .left .f_sns a:last-child {margin-right:0;}
-footer .left .f_sns a img {}
+footer .left .f_sns a img {width:100%;}
 footer .right {max-width:70%;}
 footer .right.f_b_left {
     max-width:1000px; margin-right:50px;
     display:flex; flex-flow:column wrap; justify-content:space-around;
 }
 footer .right .f_nav {
-    display:flex; flex-flow:row wrap; justify-content:center;
+    display:flex; flex-flow:row wrap;
 }
 footer .right .f_nav a {line-height:25px;}
 footer .right .f_nav a::after {
