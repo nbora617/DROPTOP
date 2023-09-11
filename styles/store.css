@@ -26,6 +26,7 @@ main .title_bg h2 {
     font-size:1.125rem; 
 }
 main #store {
+    padding:30px;
     max-width:1000px; margin:0 auto;
     /*   display:flex; flex-flow:column nowrap;
     align-items:center; */
@@ -59,30 +60,7 @@ main #store .store_top #searchFrm fieldset #searchBtn {
     width:20px; height:20px; background:none;
 }
 main #store .store_top #searchFrm fieldset #searchBtn img {width:100%;}
-main #store .store_btm {display:flex;}
-main #store .store_btm .left {}
-main #store .store_btm .left .s_desc {
-    width:300px;
-    padding:10px;
-    border-bottom:1px solid #969696;
-}
-main #store .store_btm .left .s_desc h2 {
-    font-size:0.875rem; font-weight:600;
-    display:flex; align-items:center;
-}
-main #store .store_btm .left .s_desc h2 img {
-    width:20px; height:20px;
-    margin-right:5px;
-}
-main #store .store_btm .left .s_desc h3 {
-    font-size:0.875rem;
-    margin:8px 0;
-}
-main #store .store_btm .left .s_desc p {font-size:0.875rem;}
-#store .store_btm .left .s_active {
-    background:#d9d9d9;
-}
-#store .store_btm #map {
-    width:700px; height:510px;
+#store #map {
+    width:100%; height:500px;
     background:#D9D9D9;
 }

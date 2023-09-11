@@ -23,7 +23,6 @@ header nav {
 }
 header nav > .main_m {display:flex; flex-flow:row nowrap;}
 header nav > .main_m > li {
-    background:paleturquoise;
     line-height:100px; margin-right:20px;
 }
 header nav > .main_m > li:last-child {margin-right:0;}
@@ -47,19 +46,16 @@ header nav > .main_m > li > .sub_m {
     z-index:999;
     display:flex; flex-flow:row nowrap; 
     align-items:center; justify-content:center;
-    /* background:#fff; */
 }
 header nav > .main_m > li:last-child > .sub_m {
-    left:50%;
-    background:paleturquoise;
+    /* left:50%; */ height:40px;
 }
 header nav > .main_m > li:last-child > .sub_m > li {}
 header nav > .main_m > li > .sub_m > li {}
 header nav > .main_m > li > .sub_m > li:last-child {margin-right:0;}
 header nav > .main_m > li > .sub_m > li > a {
     font-weight:500; padding:10px 20px;
-    display:block;
-    background:#fff;
+    display:inline-block; background:#fff;
 }
 header nav > .main_m > li:nth-child(2) > .sub_m > li > a {}
 header nav > .main_m > li > .sub_m > li > a:hover {
@@ -169,9 +165,9 @@ footer .right.f_b_left {
     display:flex; flex-flow:column wrap; justify-content:space-around;
 }
 footer .right .f_nav {
-    display:flex; flex-flow:row wrap;
+    display:flex; flex-flow:row wrap; justify-content:center;
 }
-footer .right .f_nav a {}
+footer .right .f_nav a {line-height:25px;}
 footer .right .f_nav a::after {
     content:''; width:1px; height:10px; display:inline-block;
     background:#222;

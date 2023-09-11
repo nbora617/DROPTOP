@@ -12,6 +12,10 @@
     header > a {font-size:1rem;}
 }    
 @media screen and (max-width:1000px) {
+     /* header */
+    header {padding:10px 20px;}
+    header .m_nav {display:block;}
+    header nav, header > .link {display:none;}
     /* main_visual */
     main #main_visual {height:100%;}
     main #main_visual .scroll span {font-size:0.875rem;}
@@ -28,10 +32,6 @@
     footer .right .f_nav a::after {margin:0 7px 0 10px;}
 }
 @media screen and (max-width:900px){
-    /* header */
-    header {padding:0 20px;}
-    header .m_nav {display:block;}
-    header nav, header > .link {display:none;}
     /* 사이드 팝업 */
     aside {display:none;}
     aside div {display:none;}
@@ -112,4 +112,5 @@
     header .open_nav {min-width:300px;}
     main section,
     main .video_bg {height:500px;}
+    footer .left {display:none;}
 }
